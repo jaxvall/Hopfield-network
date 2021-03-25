@@ -6,10 +6,10 @@ import math
 
 class Paint(object):
 
-    def __init__(self):
+    def __init__(self, grid_size  = 32, cell_size = 20):
         self.root = Tk()
-        self.cell_size = 20
-        self.canvas_size = 32
+        self.cell_size = cell_size
+        self.canvas_size = grid_size
         self.pat_len = self.canvas_size * self.canvas_size
 
         self.weights = np.zeros(
@@ -137,4 +137,4 @@ class Paint(object):
 
 
 if __name__ == '__main__':
-    Paint()
+    Paint(10, 65)
